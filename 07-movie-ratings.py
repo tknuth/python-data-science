@@ -114,7 +114,8 @@ movies["n_genres"] = movies.genres.apply(count_genres)
 # - Welcher Titel kommt am häufigsten vor?
 # - Wie viele Filme sind nicht eindeutig benannt, d.h. sie haben Duplikate?
 # - Wie viele Filmtitel kommen mehrfach vor?
-# - Erstellen Sie ein Balkendiagramm der Anzahl Filme pro Jahr
+# - Erstellen Sie ein Balkendiagramm der Anzahl Filme pro Jahr.
+# - Wie sind Durchschnitt, Median und Modus der Bewertungen (pro Genre)?
 # - Wie viele Action-Filme gibt es?
 # - Wie viele Dokumentationen gibt es?
 # - Wie viele Action-Dokumentationen gibt es?
