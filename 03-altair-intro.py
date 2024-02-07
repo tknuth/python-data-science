@@ -17,11 +17,9 @@ c = np.concatenate([a, b], axis=1)
 df = pd.DataFrame(c, columns=["A", "B"])
 df.head()
 
-
 # %%
 dg = df.melt(value_vars=["A", "B"], var_name="Gruppe", value_name="Wert")
 dg.head()
-
 
 # %%
 domain = [3, 11]
