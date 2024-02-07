@@ -245,3 +245,11 @@ f = (
 
 e & (a | b) | f & (c | d)
 
+
+# %% [markdown]
+# - Laden Sie aus `vega_datasets` den Datensatz `data.cars()`.
+# - Erstellen Sie einen Scatter-Plot und zeigen Sie Horsepower, Miles_per_Gallon und Origin an.
+# - Kodieren Sie die Farbe mit `Cylinders:Q`, `Cylinders:N` und `Cylinders:O`. Was passiert?
+# - Erstellen Sie ein Balkendiagramm mit Horsepower auf der y-Achse und Year auf der x-Achse.
+# - Was passiert, wenn Sie im vorherigen Chart Year durch Year:O ersetzen?
+# - Erstellen Sie zwei Charts und stellen diese mittels | nebeneinander oder mittels & untereinander dar.

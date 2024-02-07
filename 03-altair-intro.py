@@ -57,5 +57,6 @@ histogram = (
     )
     
 )
+
 stripplot | boxplot | histogram
 
