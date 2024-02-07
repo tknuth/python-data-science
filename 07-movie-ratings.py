@@ -119,6 +119,7 @@ movies["n_genres"] = movies.genres.apply(count_genres)
 # - Wie viele Action-Filme gibt es?
 # - Wie viele Dokumentationen gibt es?
 # - Wie viele Action-Dokumentationen gibt es?
+# - Gibt es User, deren Bewertungen als Ausreißer gelten?
 # - Wie ist die durchschnittliche Bewertung der Action-Dokumentationen?
 # - Welcher Film wurde am häufigsten bewertet (auch: "alterskorrigiert")?
 # - Welcher Film erhielt 2018 die häufigsten Bewertungen?
