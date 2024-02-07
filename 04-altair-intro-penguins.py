@@ -9,18 +9,14 @@ import seaborn as sns
 # https://github.com/allisonhorst/palmerpenguins
 df = sns.load_dataset("penguins")
 
-
 # %%
 alt.Chart(df).mark_point()
-
 
 # %%
 alt.Chart(df).mark_point().encode(x="bill_length_mm")
 
-
 # %%
 alt.Chart(df).mark_point().encode(x="bill_length_mm", y="bill_depth_mm")
-
 
 # %%
 (
@@ -31,7 +27,6 @@ alt.Chart(df).mark_point().encode(x="bill_length_mm", y="bill_depth_mm")
         y=alt.Y("bill_depth_mm", scale=alt.Scale(domain=[12, 22]))
     )
 )
-
 
 # %%
 xscale = alt.Scale(domain=[30, 60])
@@ -48,7 +43,6 @@ yscale = alt.Scale(domain=[12, 22])
     .properties(width=200)
 )
 
-
 # %%
 (
     alt.Chart(df)
@@ -62,7 +56,6 @@ yscale = alt.Scale(domain=[12, 22])
     .properties(width=200)
 )
 
-
 # %%
 # https://altair-viz.github.io/user_guide/encodings/index.html#aggregation-functions
 (
@@ -73,7 +66,6 @@ yscale = alt.Scale(domain=[12, 22])
         y="count()",
     )
 )
-
 
 # %%
 (
@@ -87,7 +79,6 @@ yscale = alt.Scale(domain=[12, 22])
     )
 ).properties(height=300, width=100)
 
-
 # %%
 (
     alt.Chart(df)
@@ -96,7 +87,6 @@ yscale = alt.Scale(domain=[12, 22])
         x="body_mass_g"
     )
 )
-
 
 # %%
 (
@@ -109,7 +99,6 @@ yscale = alt.Scale(domain=[12, 22])
         row="island"
     )
 )
-
 
 # %%
 a = (
@@ -129,7 +118,6 @@ b = (
 )
 
 a & b
-
 
 # %%
 xscale = alt.Scale(domain=(2500, 6500))
@@ -152,7 +140,6 @@ b = (
 )
 
 a & b
-
 
 # %%
 yscale1 = alt.Scale(domain=[12, 22])
@@ -244,7 +231,6 @@ f = (
 )
 
 e & (a | b) | f & (c | d)
-
 
 # %% [markdown]
 # - Laden Sie aus `vega_datasets` den Datensatz `data.cars()`.
