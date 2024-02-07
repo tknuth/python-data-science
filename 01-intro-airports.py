@@ -97,3 +97,13 @@ airports[airports.state.isin(["CA", "NY"])]
 # %%
 # Welche Flughäfen liegen außerhalb der USA?
 airports[airports.country != "USA"]
+
+# %% [markdown]
+# - Welche Flughäfen liegen oberhalb des Breitengrads (latitude) 70 Grad N?
+# - Welche Städte haben die meisten Flughäfen?
+# - Welche Staaten haben Flughäfen, die unterhalb 40 Grad N liegen?
+# - Wie viele Flughäfen liegen nicht in den USA?
+# - Wie viele Flughäfen tragen "Airport" im Namen?
+# - Welche Flughäfen sind verwechslungsgefährdet?
+# - Gibt es Flughäfen in Texas, die "International" im Namen Tragen?
+# - Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
