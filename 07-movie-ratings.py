@@ -123,3 +123,10 @@ movies["n_genres"] = movies.genres.apply(count_genres)
 # - Welcher Film erhielt 2018 die häufigsten Bewertungen?
 # - Stellen Sie eine eigene Frage und Antwort vor.
 # - Welche Wörter sind in den Filmtiteln am häufigsten?
+# - Visualisieren Sie die Bewertungen eines einzelnen Users
+# - In welchem Jahr wurden die meisten Filme bewertet?
+# - Erstellen Sie ein Histogramm der durchschnittlichen Bewertungen für einzelne User.
+# - Erstellen Sie einen Boxplot der durchschnittlichen Bewertungen für einzelne User.
+# - Erstellen Sie ein Balkendiagramm der Anzahl Filmbewertungen pro Jahr.
+# - Visualisieren Sie für ein paar Filme die Anzahl Bewertungen nach Jahren seit Veröffentlichung.
+# - Wählen Sie zwei beliebige Filme und visualisieren die Bewertungen der Nutzer, z.B. mit `df.pivot`.
