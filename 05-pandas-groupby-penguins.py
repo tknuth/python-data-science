@@ -50,3 +50,20 @@ df.describe()
 
 # %%
 df.groupby("species").describe()
+
+# %%
+q1 = df.bill_length_mm.quantile(0.25)
+q2 = df.bill_length_mm.quantile(0.5)
+q3 = df.bill_length_mm.quantile(0.75)
+iqr = q3 - q1
+upper = q3 + iqr * 1.5
+lower = q1 - iqr * 1.5
+
+# %%
+(df.bill_length_mm < lower).sum()
+
+# %%
+(df.bill_length_mm > upper).sum()
+
+# %%
+df.corr(numeric_only=True)
