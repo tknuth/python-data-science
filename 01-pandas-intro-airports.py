@@ -131,7 +131,10 @@ airports[airports.country != "USA"]
 # - Wie kann bei `.value_counts()` die ursprüngliche Sortierung erhalten werden?
 
 # %% [markdown]
+# **Sonstiges**
+#
 # Analysieren Sie einen der untenstehenden Datensätze aus `vega_datasets`.
+#
 # - anscombe
 # - disasters
 # - cars
