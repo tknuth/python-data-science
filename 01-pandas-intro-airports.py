@@ -16,7 +16,7 @@
 # %% [markdown]
 # **Themen**
 #
-# - Nutzung von pandas und `vega_datasets`
+# - Nutzung von pandas und vega_datasets
 # - DataFrames und Series, `.shape` und `.dtypes`
 # - Auswahl von Spalten und Zeilen mit `[]`, `.loc[]` und `.iloc[]`
 # - Übersicht mit `.describe()` und `.info()`
@@ -25,6 +25,7 @@
 # - Nutzung der String-Methoden mit `series.str`
 # - Duplikation von Daten: `.duplicated()` und `.drop_duplicates()`
 # - boolesche Series für Filterung
+# - Arbeit mit der pandas-Dokumentation
 
 # %%
 from vega_datasets import data
