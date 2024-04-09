@@ -13,6 +13,19 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# **Themen**
+#
+# - Nutzung von pandas und `vega_datasets`
+# - DataFrames und Series, `.shape` und `.dtypes`
+# - Auswahl von Spalten und Zeilen mit `[]`, `.loc[]` und `.iloc[]`
+# - Übersicht mit `.describe()` und `.info()`
+# - Aggregationen: `.mean()`, `.sum()` und `.value_counts()`
+# - fehlende Werte: `.isna()`, `.notna()` und `.fillna()`
+# - Nutzung der String-Methoden mit `series.str`
+# - Duplikation von Daten: `.duplicated()` und `.drop_duplicates()`
+# - boolesche Series für Filterung
+
 # %%
 from vega_datasets import data
 import pandas as pd
@@ -65,7 +78,7 @@ len(airports[airports.longitude > 0])
 
 # %%
 # Wie viel Prozent der Flughäfen im Datensatz liegen in Kalifornien?
-(airports.state == "CA").mean()*100
+(airports.state == "CA").mean() * 100
 
 # %%
 # Welcher Staat hat die meisten Flughäfen?
@@ -99,11 +112,22 @@ airports[airports.state.isin(["CA", "NY"])]
 airports[airports.country != "USA"]
 
 # %% [markdown]
-# - Welche Flughäfen liegen oberhalb des Breitengrads (latitude) 70 Grad N?
-# - Welche Städte haben die meisten Flughäfen?
-# - Welche Staaten haben Flughäfen, die unterhalb 40 Grad N liegen?
-# - Wie viele Flughäfen liegen nicht in den USA?
-# - Wie viele Flughäfen tragen "Airport" im Namen?
-# - Welche Flughäfen sind verwechslungsgefährdet?
-# - Gibt es Flughäfen in Texas, die "International" im Namen Tragen?
-# - Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
+# **Aufgaben**
+#
+# 1. Welche Flughäfen liegen oberhalb des Breitengrads (latitude) 70 Grad N?
+# 2. Welche Städte haben die meisten Flughäfen?
+# 3. Welche Staaten haben Flughäfen, die unterhalb 40 Grad N liegen?
+# 4. Wie viele Flughäfen liegen nicht in den USA?
+# 5. Wie viele Flughäfen tragen "Airport" im Namen?
+# 6. Welche Flughäfen sind verwechslungsgefährdet?
+# 7. Gibt es Flughäfen in Texas, die "International" im Namen Tragen?
+# 8. Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
+
+# %% [markdown]
+# Analysieren Sie einen der untenstehenden Datensätze aus `vega_datasets`.
+# - anscombe
+# - disasters
+# - cars
+# - jobs
+# - movies
+# - population
