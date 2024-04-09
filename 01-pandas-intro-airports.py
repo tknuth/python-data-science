@@ -124,6 +124,12 @@ airports[airports.country != "USA"]
 # 8. Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
 
 # %% [markdown]
+# **API-Übungen**
+# - Wie lässt können in `.describe()` Perzentile gewählt werden?
+# - Wie kann bei Aggregationen über Spalten bzw. Zeilen aggregiert werden?
+# - Wie kann bei `.value_counts()` die ursprüngliche Sortierung erhalten werden?
+
+# %% [markdown]
 # Analysieren Sie einen der untenstehenden Datensätze aus `vega_datasets`.
 # - anscombe
 # - disasters
