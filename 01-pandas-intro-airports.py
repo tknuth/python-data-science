@@ -126,7 +126,7 @@ airports[airports.country != "USA"]
 # %% [markdown]
 # **API-Übungen**
 #
-# - Wie lässt können in `.describe()` Perzentile gewählt werden?
+# - Wie können in `.describe()` Perzentile gewählt werden?
 # - Wie kann bei Aggregationen über Spalten bzw. Zeilen aggregiert werden?
 # - Wie kann bei `.value_counts()` die ursprüngliche Sortierung erhalten werden?
 
