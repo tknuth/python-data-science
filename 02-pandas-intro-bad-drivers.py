@@ -42,3 +42,13 @@ df["largest_cause"] = df[["speeding", "alcohol", "distracted"]].idxmax(axis=1)
 
 # %%
 df.sort_values("fatalities_speeding", ascending=False).head()
+
+# %% [markdown]
+# ## Aufgaben
+#
+# 1. Benennen Sie die Spalten mit passenden Kurznamen.
+# 2. Legen Sie Spalten an, sodass alle Aussagen positiv formuliert werden können (z.B. `not_distracted` zu `distracted`).
+# 3. In welchen Staaten ist der Anteil der tödlichen Unfälle überdurchschnittlich hoch?
+# 4. In welchen Staaten ist der Anteil der tödlichen Unfälle durch überhöhte Geschwindigkeit besonders hoch?
+# 5. Wie viele Fahrerinnen und Fahrer waren in tödliche Unfälle mit überhöhter Geschwindigkeit involviert?
+# 6. Welche ist pro Staat die größte Ursache von tödlichen Unfällen (Geschwindigkeit, Alkohol, Ablenkung)?
