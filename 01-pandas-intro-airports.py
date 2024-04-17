@@ -130,15 +130,3 @@ airports[airports.country != "USA"]
 # - Wie können in `.describe()` Perzentile gewählt werden?
 # - Wie kann bei Aggregationen über Spalten bzw. Zeilen aggregiert werden?
 # - Wie kann bei `.value_counts()` die ursprüngliche Sortierung erhalten werden?
-
-# %% [markdown]
-# ## Sonstiges
-#
-# Analysieren Sie einen der untenstehenden Datensätze aus `vega_datasets`.
-#
-# - anscombe
-# - disasters
-# - cars
-# - jobs
-# - movies
-# - population
