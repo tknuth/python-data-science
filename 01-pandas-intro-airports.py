@@ -14,7 +14,7 @@
 # ---
 
 # %% [markdown]
-# **Themen**
+# ## Themen
 #
 # - Nutzung von pandas und vega_datasets
 # - DataFrames und Series, `.shape` und `.dtypes`
@@ -113,7 +113,7 @@ airports[airports.state.isin(["CA", "NY"])]
 airports[airports.country != "USA"]
 
 # %% [markdown]
-# **Aufgaben**
+# ## Aufgaben
 #
 # 1. Welche Flughäfen liegen oberhalb des Breitengrads (latitude) 70 Grad N?
 # 2. Welche Städte haben die meisten Flughäfen?
@@ -125,14 +125,14 @@ airports[airports.country != "USA"]
 # 8. Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
 
 # %% [markdown]
-# **API-Übungen**
+# ## API-Übungen
 #
 # - Wie können in `.describe()` Perzentile gewählt werden?
 # - Wie kann bei Aggregationen über Spalten bzw. Zeilen aggregiert werden?
 # - Wie kann bei `.value_counts()` die ursprüngliche Sortierung erhalten werden?
 
 # %% [markdown]
-# **Sonstiges**
+# ## Sonstiges
 #
 # Analysieren Sie einen der untenstehenden Datensätze aus `vega_datasets`.
 #
