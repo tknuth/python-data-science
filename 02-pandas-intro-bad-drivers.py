@@ -34,15 +34,6 @@ df.columns = [
 # %%
 df.head()
 
-# %%
-df["distracted"] = 100 - df.not_distracted
-df["prev_accidents"] = 100 - df.no_prev_accidents
-df["fatalities_speeding"] = df.fatalities * df.speeding / 100
-df["largest_cause"] = df[["speeding", "alcohol", "distracted"]].idxmax(axis=1)
-
-# %%
-df.sort_values("fatalities_speeding", ascending=False).head()
-
 # %% [markdown]
 # ## Aufgaben
 #
