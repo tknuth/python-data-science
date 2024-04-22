@@ -16,7 +16,7 @@
 # %% [markdown]
 # ## Themen
 #
-# - Aggregationen über verschiedene Axen
+# - Aggregationen über verschiedene Achsen
 # - Umbenennung von Indizes und Spalten
 # - Verkettung von Aggregationen
 # - Funktionen `.idxmax()` und `.idxmin()`
