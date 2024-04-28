@@ -1,5 +1,28 @@
-#!/usr/bin/env python
-# coding: utf-8
+# ---
+# jupyter:
+#   jupytext:
+#     formats: py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.16.1
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %% [markdown]
+# ## Themen
+#
+# - Chart-Erstellung mit Altair
+# - lange und breite Datenformate
+# - Symbole, Kodierung und Eigenschaften
+# - vertikale und horizontale Layouts
+# - Skalentypen
+# - Aggregationen mit Altair
+
 # %%
 import numpy as np
 import pandas as pd
@@ -21,6 +44,7 @@ df.head()
 dg = df.melt(value_vars=["A", "B"], var_name="Gruppe", value_name="Wert")
 dg.head()
 
+
 # %%
 domain = [3, 11]
 width_small = 100
@@ -31,8 +55,9 @@ stripplot = (
     .encode(
         x=alt.X("Gruppe:N", axis=alt.Axis(labelAngle=0)),
         y=alt.Y("Wert:Q", scale=alt.Scale(domain=domain)),
-        color="Gruppe:N"
-    ).properties(width=width_small)
+        color="Gruppe:N",
+    )
+    .properties(width=width_small)
 )
 
 boxplot = (
@@ -41,8 +66,9 @@ boxplot = (
     .encode(
         x=alt.X("Gruppe:N", axis=alt.Axis(labelAngle=0)),
         y=alt.Y("Wert:Q", scale=alt.Scale(domain=domain), title=None),
-        color="Gruppe:N"
-    ).properties(width=width_small)
+        color="Gruppe:N",
+    )
+    .properties(width=width_small)
 )
 
 histogram = (
@@ -51,10 +77,9 @@ histogram = (
     .encode(
         x=alt.X("Wert:Q", title="Wert").bin(maxbins=20),
         y=alt.Y("count()", title="Anzahl"),
-        color=alt.Color("Gruppe:N").legend(None)
+        color=alt.Color("Gruppe:N").legend(None),
     )
-    
 )
 
+# horizontale Anordnung mit `|`, vertikale Anordnung mit `&`
 stripplot | boxplot | histogram
-
