@@ -25,7 +25,7 @@ df.species.value_counts()
 
 # %%
 # Anzahl nach Geschlecht
-df.sex.value_counts(dropna=False) # / len(penguins)
+df.sex.value_counts(dropna=False)
 
 # %%
 # Anzahl nach Gattung pro Insel
@@ -67,3 +67,13 @@ lower = q1 - iqr * 1.5
 
 # %%
 df.corr(numeric_only=True)
+
+# %% [markdown]
+# ## Aufgaben
+#
+# 1. Wie viele Pinguine wurden erfasst?
+# 2. Wie hoch ist der Anteil der weiblichen/männlichen Pinguine im Datensatz?
+# 3. Wie viele Pinguine jeder Spezies leben auf den Inseln?
+# 4. Welche Spezies hat im Mittel die schwersten Pinguine?
+# 5. Bei welcher variiert das Gewicht am stärksten?
+# 6. Was sind Mittelwert und Standardabweichung der numerischen Variablen?
