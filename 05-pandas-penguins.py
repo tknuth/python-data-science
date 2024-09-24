@@ -75,5 +75,5 @@ df.corr(numeric_only=True)
 # 2. Wie hoch ist der Anteil der weiblichen/männlichen Pinguine im Datensatz?
 # 3. Wie viele Pinguine jeder Spezies leben auf den Inseln?
 # 4. Welche Spezies hat im Mittel die schwersten Pinguine?
-# 5. Bei welcher variiert das Gewicht am stärksten?
+# 5. Bei welcher Spezies variiert das Gewicht am stärksten?
 # 6. Was sind Mittelwert und Standardabweichung der numerischen Variablen?
