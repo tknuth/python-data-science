@@ -32,6 +32,7 @@ df = df.replace("**", np.nan)
 df.iloc[:, 2:] = df.iloc[:, 2:].astype("float")
 df.head()
 
+
 # %%
 dg = df.groupby("prim_state").tot_emp.sum().reset_index()
 
@@ -53,6 +54,7 @@ chart = bars + numbers + states
     .configure_scale(bandPaddingInner=0.3, bandPaddingOuter=0.5)
     .properties(height=300, width=500)
 )
+
 
 # %%
 dg = df.groupby("prim_state")[["tot_emp", "jobs_1000"]].sum().reset_index()
