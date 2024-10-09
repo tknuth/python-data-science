@@ -1,5 +1,18 @@
-#!/usr/bin/env python
-# coding: utf-8
+# ---
+# jupyter:
+#   jupytext:
+#     formats: py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.16.1
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
 # %%
 import pandas as pd
 import altair as alt
@@ -24,7 +37,7 @@ alt.Chart(df).mark_point().encode(x="bill_length_mm", y="bill_depth_mm")
     .mark_point()
     .encode(
         x=alt.X("bill_length_mm", scale=alt.Scale(domain=[30, 60])),
-        y=alt.Y("bill_depth_mm", scale=alt.Scale(domain=[12, 22]))
+        y=alt.Y("bill_depth_mm", scale=alt.Scale(domain=[12, 22])),
     )
 )
 
@@ -38,7 +51,7 @@ yscale = alt.Scale(domain=[12, 22])
     .encode(
         x=alt.X("bill_length_mm", scale=xscale),
         y=alt.Y("bill_depth_mm", scale=yscale),
-        color=alt.Color("species").legend(direction="horizontal", orient="bottom")
+        color=alt.Color("species").legend(direction="horizontal", orient="bottom"),
     )
     .properties(width=200)
 )
@@ -51,7 +64,7 @@ yscale = alt.Scale(domain=[12, 22])
         x=alt.X("bill_length_mm", scale=xscale),
         y=alt.Y("bill_depth_mm", scale=yscale),
         color=alt.Color("species").legend(direction="horizontal", orient="bottom"),
-        column=alt.Column("island")
+        column=alt.Column("island"),
     )
     .properties(width=200)
 )
@@ -75,29 +88,18 @@ yscale = alt.Scale(domain=[12, 22])
         y=alt.X("body_mass_g").bin(maxbins=30),
         x=alt.Y("count()"),
         color=alt.Color("sex"),
-        column="sex"
+        column="sex",
     )
 ).properties(height=300, width=100)
 
 # %%
-(
-    alt.Chart(df)
-    .mark_boxplot()
-    .encode(
-        x="body_mass_g"
-    )
-)
+(alt.Chart(df).mark_boxplot().encode(x="body_mass_g"))
 
 # %%
 (
     alt.Chart(df)
     .mark_boxplot()
-    .encode(
-        x="body_mass_g",
-        y="species",
-        color="species",
-        row="island"
-    )
+    .encode(x="body_mass_g", y="species", color="species", row="island")
 )
 
 # %%
@@ -108,14 +110,8 @@ a = (
         x=alt.X("body_mass_g").bin(maxbins=30),
         y="count()",
     )
-) 
-b = (
-    alt.Chart(df)
-    .mark_boxplot()
-    .encode(
-        x="body_mass_g"
-    )
 )
+b = alt.Chart(df).mark_boxplot().encode(x="body_mass_g")
 
 a & b
 
@@ -133,10 +129,7 @@ a = (
 b = (
     alt.Chart(df)
     .mark_boxplot()
-    .encode(
-        x=alt.X("body_mass_g").scale(xscale),
-        y="species"
-    )
+    .encode(x=alt.X("body_mass_g").scale(xscale), y="species")
 )
 
 a & b
@@ -157,7 +150,7 @@ a = (
         x=alt.X("bill_length_mm").scale(xscale1),
         y=alt.Y("bill_depth_mm").scale(yscale1),
         color=alt.condition(brush, "species", alt.value("grey")),
-        shape="island"
+        shape="island",
     )
     .add_params(brush)
 )
@@ -168,11 +161,9 @@ b = (
     .encode(
         x=alt.X("count()").scale(domain=bin_domain),
         y=alt.Y("bill_depth_mm", title=None).bin(maxbins=30, extent=yscale1.domain),
-        color="species"
+        color="species",
     )
-    .properties(
-        width=50
-    )
+    .properties(width=50)
     .transform_filter(brush)
 )
 
@@ -183,7 +174,7 @@ c = (
         x=alt.X("body_mass_g").scale(xscale2),
         y=alt.Y("flipper_length_mm").scale(yscale2),
         color=alt.condition(brush, "species", alt.value("grey")),
-        shape="island"
+        shape="island",
     )
     .add_params(brush)
 )
@@ -194,12 +185,10 @@ d = (
     .encode(
         x=alt.X("count()").scale(domain=bin_domain),
         y=alt.Y("flipper_length_mm", title=None).bin(maxbins=30, extent=yscale2.domain),
-        color="species"
+        color="species",
     )
     .transform_filter(brush)
-    .properties(
-        width=50
-    )
+    .properties(width=50)
 )
 
 e = (
@@ -208,12 +197,10 @@ e = (
     .encode(
         y=alt.Y("count()").scale(domain=bin_domain),
         x=alt.X("bill_length_mm", title=None).bin(maxbins=30, extent=xscale1.domain),
-        color="species"
+        color="species",
     )
     .transform_filter(brush)
-    .properties(
-        height=50
-    )
+    .properties(height=50)
 )
 
 f = (
@@ -222,12 +209,10 @@ f = (
     .encode(
         y=alt.Y("count()").scale(domain=bin_domain),
         x=alt.X("body_mass_g", title=None).bin(maxbins=30, extent=xscale2.domain),
-        color="species"
+        color="species",
     )
     .transform_filter(brush)
-    .properties(
-        height=50
-    )
+    .properties(height=50)
 )
 
 e & (a | b) | f & (c | d)

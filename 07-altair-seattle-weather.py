@@ -62,24 +62,17 @@ df["day_number"] = df.date.dt.day
 df["year"] = df.date.dt.year
 
 alt.Chart(df).mark_rect().encode(
-    x="day_number:O",
-    y="month_number:O",
-    color="max(temp_max)"
+    x="day_number:O", y="month_number:O", color="max(temp_max)"
 )
 
 # %%
 # https://altair-viz.github.io/user_guide/transform/timeunit.html
 alt.Chart(df).mark_rect().encode(
-    x="date(date)",
-    y="month(date)",
-    color="max(temp_max)",
-    row="year"
+    x="date(date)", y="month(date)", color="max(temp_max)", row="year"
 ).configure_view(strokeWidth=0, step=20).properties(width=600, height=200)
 
 # %%
 # https://altair-viz.github.io/user_guide/transform/timeunit.html
 alt.Chart(df).mark_bar().encode(
-    x="yearmonth(date)",
-    y="max(temp_max)",
-    color="year(date):N"
+    x="yearmonth(date)", y="max(temp_max)", color="year(date):N"
 ).configure_view(strokeWidth=0, step=20).properties(width=600, height=200)
