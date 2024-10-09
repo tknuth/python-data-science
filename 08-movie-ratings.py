@@ -20,7 +20,9 @@ import altair as alt
 # https://grouplens.org/datasets/movielens/
 movies = pd.read_csv("./movies.csv")
 movies["title_with_year"] = movies.title
-movies[["title", "year"]] = movies.title_with_year.str.strip().str.extract("(.+) \((\d{4})\)$")
+movies[["title", "year"]] = movies.title_with_year.str.strip().str.extract(
+    "(.+) \((\d{4})\)$"
+)
 
 ratings = pd.read_csv("ratings.csv")
 ratings.timestamp = pd.to_datetime(ratings.timestamp, unit="s")
@@ -69,7 +71,7 @@ for i, series in movies.iterrows():
         if genre in series.genres:
             c += 1
     l.append(c)
-    
+
 movies["n_genres"] = l
 
 # %%
@@ -99,13 +101,14 @@ l = []
 
 for i, series in movies.iterrows():
     l.append(len(series.genres.split("|")))
-    
+
 movies["n_genres"] = l
 
 
 # %%
 def count_genres(text):
-    return len(text.split('|'))
+    return len(text.split("|"))
+
 
 movies["n_genres"] = movies.genres.apply(count_genres)
 

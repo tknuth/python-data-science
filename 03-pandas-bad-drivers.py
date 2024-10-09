@@ -28,7 +28,7 @@ df.columns = [
     "not_distracted",
     "no_prev_accidents",
     "insurance",
-    "losses"
+    "losses",
 ]
 
 # %%
