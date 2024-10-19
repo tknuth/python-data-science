@@ -125,19 +125,21 @@ airports.drop(columns=["latitude", "longitude"])
 airports.state.value_counts().nlargest(5)
 
 # %%
-# Aggregation über Achsen
+# `apply` führt eine Funktion entlang einer Achse aus
+# und wird typischerweise zur Aggregation verwendet.
 airports[["longitude", "latitude"]].apply(np.mean)
 
 # %%
-# Ersetzen von Werten
+# Ersetzen von Werten in einer Series
 airports.country.replace("USA", "United States").value_counts()
 
 # %%
-# Mapping von Werten
+# Mapping von Werten in einer Series
 airports.country.map({"USA": "United States"}).value_counts(dropna=False)
 
 # %%
-airports[["name", "city"]].fillna("").applymap(str.upper)
+# `map` ersetzt `applymap` bei DataFrames.
+airports[["name", "city"]].fillna("").map(str.upper)
 
 # %% [markdown]
 # ## Aufgaben
