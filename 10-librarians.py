@@ -32,7 +32,6 @@ df = df.replace("**", np.nan)
 df.iloc[:, 2:] = df.iloc[:, 2:].astype("float")
 df.head()
 
-
 # %%
 dg = df.groupby("prim_state").tot_emp.sum().reset_index()
 
@@ -55,7 +54,6 @@ chart = bars + numbers + states
     .properties(height=300, width=500)
 )
 
-
 # %%
 dg = df.groupby("prim_state")[["tot_emp", "jobs_1000"]].sum().reset_index()
 
@@ -76,7 +74,6 @@ text = c.mark_text(align="left", dx=5, dy=-5).encode(
 )
 
 (circles + text).properties(width=500, height=500)
-
 
 # %% [markdown]
 # - Wie viele Bibliotheken werden aufgeführt?
