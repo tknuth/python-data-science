@@ -35,7 +35,7 @@ import numpy as np
 airports = data.airports()
 
 # %%
-# In einem Notebook lässt sich der DataFrame tabellarisch anzeigen
+# In einem Notebook lässt sich der DataFrame tabellarisch anzeigen.
 airports.head()
 
 # %%
@@ -111,6 +111,33 @@ airports[airports.state.isin(["CA", "NY"])]
 # %%
 # Welche Flughäfen liegen außerhalb der USA?
 airports[airports.country != "USA"]
+
+# %%
+# Setzen eines Index zum schnellen Abrufen
+airports.set_index("iata").loc[["JFK", "LAX"]]
+
+# %%
+# Löschen von Spalten oder Zeilen
+airports.drop(columns=["latitude", "longitude"])
+
+# %%
+# Selektion der Staaten mit den meisten Flughäfen
+airports.state.value_counts().nlargest(5)
+
+# %%
+# Aggregation über Achsen
+airports[["longitude", "latitude"]].apply(np.mean)
+
+# %%
+# Ersetzen von Werten
+airports.country.replace("USA", "United States").value_counts()
+
+# %%
+# Mapping von Werten
+airports.country.map({"USA": "United States"}).value_counts(dropna=False)
+
+# %%
+airports[["name", "city"]].fillna("").applymap(str.upper)
 
 # %% [markdown]
 # ## Aufgaben
