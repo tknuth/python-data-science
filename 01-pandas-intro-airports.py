@@ -150,8 +150,9 @@ airports[["name", "city"]].fillna("").map(str.upper)
 # 4. Wie viele Flughäfen liegen nicht in den USA?
 # 5. Wie viele Flughäfen tragen "Airport" im Namen?
 # 6. Welche Flughäfen sind verwechslungsgefährdet?
-# 7. Gibt es Flughäfen in Texas, die "International" im Namen Tragen?
-# 8. Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
+# 7. Gibt es Flughäfen in Texas, die "International" im Namen tragen?
+# 8. Die Namen welcher Flughäfen bestehen aus mehreren Wörtern?
+# 9. Entwickeln Sie eine eigene Frage zum Datensatz und analysieren Sie.
 
 # %% [markdown]
 # ## API-Übungen
