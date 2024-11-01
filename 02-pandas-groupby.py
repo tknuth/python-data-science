@@ -103,9 +103,18 @@ df
 df.groupby(["group", "class"]).mean()
 
 # %%
+# Die Gruppen werden können als Spalten erhalten bleiben.
+df.groupby("group", as_index=False).mean()
+
+# %%
 # Gruppierung ist auch mithilfe einer booleschen Series möglich.
 df.groupby(df["class"] > 2).mean(numeric_only=True)
 
 # %%
 # Auswahl von Spalten vor der Aggregation
 df.groupby(df["class"] > 2)[["e", "f", "g", "h"]].mean()
+
+# %%
+# Zur Gruppierung kann auch eine Funktion angegeben werden.
+# Diese erhält den Index als Argument und gibt den Gruppennamen zurück.
+df.reset_index(drop=True).groupby(lambda x: x % 2)[["e", "f", "g", "h"]].mean()
