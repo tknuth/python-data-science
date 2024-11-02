@@ -46,3 +46,9 @@ df.LanguageHaveWorkedWith.fillna("n/a").str.split(";").explode().value_counts() 
 df.AISearchDevHaveWorkedWith.str.contains("ChatGPT").value_counts(
     dropna=False, normalize=True
 )
+
+# Mit wie vielen Programmiersprachen haben die Teilnehmer:innen bereits gearbeitet?
+# %%
+df.LanguageHaveWorkedWith.str.get_dummies(";").sum(axis=1).value_counts(
+    normalize=True
+).sort_index()
