@@ -17,7 +17,7 @@
 import pandas as pd
 
 # https://github.com/fivethirtyeight/data/blob/master/bad-drivers/bad-drivers.csv
-df = pd.read_csv("./bad-drivers.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/bad-drivers/bad-drivers.csv")
 
 # %%
 df.columns = [
