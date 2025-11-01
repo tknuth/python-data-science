@@ -21,7 +21,7 @@ np.array([1, 2, 3])
 
 # %%
 # Erstellen eines Arrays mit Werten von 0 bis 9,
-# ähnlich wie mit `range(10)`.
+# ähnlich wie mit `range(10)`
 values = np.arange(10)
 
 # %%
